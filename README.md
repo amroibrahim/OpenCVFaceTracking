@@ -37,7 +37,7 @@ MosquitIO is a micro controller, that has pins to connect two servo motors. The 
 Comunicating with MosquitIO is very simple, it takes a 13 byte packet formatted as following
 
 MosquitIO Packet  structure
-```
+``` cpp
 uint8_t cHeader;     // 255: header, this begins a packet and must always be sent.
 uint8_t cByteCount;  // Number of bytes: total number of bytes (not including the header or this byte) to be sent. There is always 11 in this struct
 uint8_t cTilt;       // Tilt servo: 0-255 for -100 to 100 degrees (approximately)
@@ -63,7 +63,7 @@ Most of the changes will be in the main function here is a list of what you migh
 * Capture device index
   * If you have a single web cam attached, mostly you should be good, if more than one, you might need to change the device index passed to the webcam object.
 
-```
+``` cpp
 int main(int argc, const char** argv)
 {
 	...
@@ -73,7 +73,7 @@ int main(int argc, const char** argv)
 
 * Micro-controller port
   * You want to make sure that your MosquitIO / Arduino port is correct. It should be easy to figure out if you go though the COM port in your device manger.
-```
+``` cpp
 int main(int argc, const char** argv)
 {
     ...
